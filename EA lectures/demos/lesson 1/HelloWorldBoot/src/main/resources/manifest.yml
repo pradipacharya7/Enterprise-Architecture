@@ -1,0 +1,6 @@
+applications:
+- name: HelloWorldBoot
+  memory: 1024M
+  buildpack: java_buildpack
+  routes:
+  - route: helloworldboot.cfapps.io

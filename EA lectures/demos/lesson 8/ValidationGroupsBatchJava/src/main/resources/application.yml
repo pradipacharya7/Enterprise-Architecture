@@ -1,0 +1,12 @@
+
+spring:
+    datasource:
+       driverClassName: com.mysql.cj.jdbc.Driver
+       url: jdbc:mysql://localhost:3306/eacore?useSSL=false
+       username: root
+       password: root
+    jpa:
+       hibernate.ddl-auto: create
+       show-sql: false
+       database-platform: org.hibernate.dialect.MySQL55Dialect
+       properties.javax.persistence.validation.mode: none

@@ -1,0 +1,20 @@
+
+spring:
+    datasource:
+       driverClassName: com.mysql.cj.jdbc.Driver
+       url: jdbc:mysql://localhost:3306/eacore?useSSL=false
+       username: root
+       password: root
+    jpa:
+       hibernate:
+          ddl-auto: create
+          naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+       show-sql: false
+       database-platform: org.hibernate.dialect.MySQL55Dialect
+       properties:
+          hibernate.hbm2ddl.import_files: sql/data_credentials.sql,sql/data_authority.sql,sql/data_member.sql,sql/data_member_workflow_queue.sql
+          hibernate.hbm2ddl.import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
+          javax.persistence.validation.mode: none
+    batch: 
+      job.enabled: false
+ 
